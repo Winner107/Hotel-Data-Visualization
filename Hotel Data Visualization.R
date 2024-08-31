@@ -21,10 +21,12 @@ ggplot(data = hotel_bookings) +
 ggplot(data = hotel_bookings) +
   geom_bar(mapping = aes(x=distribution_channel,fill=deposit_type)) + facet_wrap(~deposit_type) +
   theme(axis.text.x = element_text(angle = 45))
+ggsave('Hotel 2.png')
 
 ggplot(data = hotel_bookings) +
   geom_bar(mapping = aes(x=distribution_channel,fill=market_segment)) + facet_wrap(~market_segment) +
   theme(axis.text.x = element_text(angle = 45))
+ggsave('Hotel 1.png')
 
 ggplot(data = hotel_bookings) +
   geom_bar(mapping = aes(x=distribution_channel,fill=market_segment)) + facet_grid(deposit_type~market_segment) +
